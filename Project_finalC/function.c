@@ -244,7 +244,7 @@ void searchCategory() {
     char key[20];
     printf("Nhap tu khoa tim kiem: ");
     fgets(key, sizeof(key), stdin);
-    key[strcspn(key, "\n")] = '\n';
+    key[strcspn(key, "\n")] = '\0';
     int found = 0;
     printf("\n+-------+--------------------+\n");
     printf("|  ID   |      Ten Danh Muc  |\n");
