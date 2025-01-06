@@ -93,7 +93,7 @@ void addCategory() {
     }
     printf("Nhap ten danh muc: ");
     fgets(newCategory.name, sizeof(newCategory.name), stdin);
-    newCategory.name[strcspn(newCategory.name, "\n")] = '\n';
+    newCategory.name[strcspn(newCategory.name, "\n")] = '\0';
 //Ktra Ten  
      if(!validateName(newCategory.name)) {
         return;
@@ -132,7 +132,7 @@ void editCategory() {
         if (strcmp(categories[i].id, idEdit) == 0) {
             printf("Nhap ten moi cho danh muc: ");
             fgets(categories[i].name, sizeof(categories[i].name), stdin);
-            categories[i].name[strcspn(categories[i].name, "\n")] = '\n';
+            categories[i].name[strcspn(categories[i].name, "\n")] = '\0';
             printf("Sua danh muc thanh cong.\n");
             return;
         }
@@ -405,7 +405,7 @@ void fileMenu() {
         printf("[555] Quay lai menu chinh\n");
         printf("Lua chon: ");
         scanf("%d", &choice);
-        InputXoaKhoangTrang();
+        InputXoaKhoangTrang();	
 
         switch (choice) {
             case 1:
